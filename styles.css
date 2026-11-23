@@ -99,3 +99,42 @@ body{background-image:radial-gradient(circle at 16% 4%,rgba(117,103,69,.075),tra
 .booking-modal label.payment-choice input[type="radio"]:focus-visible + span{outline:2px solid var(--gold);outline-offset:2px}
 .booking-modal .demo-caption{font-size:11px;line-height:1.6;margin-top:18px}
 @media(max-width:380px){.booking-modal .booking-total strong{font-size:21px}.booking-modal .payment-grid{gap:6px}.booking-modal label.payment-choice span{font-size:10px}}
+
+/* Kontur editorial refinement: less visual clutter, clearer mobile layout */
+.hero-media{background-image:linear-gradient(180deg,rgba(8,10,8,.05),rgba(8,10,8,.26)),url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1300&q=85');background-position:center;box-shadow:none}
+.hero-photo-caption{position:absolute;bottom:20px;left:22px;letter-spacing:.18em;font-size:10px;color:#f3eee6;text-shadow:0 1px 5px #0008}
+.hero-media .photo-fallback,.detail-photo .photo-fallback,.interior-photo .photo-fallback{display:none}
+.hero{min-height:590px}
+.hero-copy{padding-bottom:32px}
+.hero .lede{max-width:410px}
+.price-row .service-name small{color:#a6a69c}
+.price-action{font-family:Arial,sans-serif}
+.benefits div{padding-top:16px}
+.benefits strong{font-size:13px}
+.benefits small{font-size:11px}
+.gallery-quote{min-height:300px}
+.gallery-quote p{font-size:clamp(30px,3vw,42px);line-height:1.15}
+.gallery-shot span{display:none}
+.visit-intro h2{font-size:clamp(40px,4.4vw,68px)}
+@media(max-width:700px){
+ .hero{min-height:0;gap:22px;padding-top:18px;padding-bottom:50px}
+ .hero-copy{padding:14px 0 0;min-height:0}
+ .hero h1{font-size:clamp(50px,12.5vw,76px);margin:16px 0 22px}
+ .hero-media{min-height:350px;margin-right:0;box-shadow:none}
+ .hero-photo-caption{font-size:9px}
+ .section{padding:76px 0}
+ .section-head p{font-size:12px;line-height:1.7}
+ .price-row{grid-template-columns:22px minmax(0,1fr) 80px 32px;gap:7px;min-height:90px}
+ .price-row .service-name small{display:none}
+ .price-row .price{font-size:12px}
+ .price-row .price-action{width:30px;height:32px;font-size:17px}
+ .benefits{grid-template-columns:1fr;gap:12px}
+ .benefits div{padding-top:12px}
+ .benefits strong{font-size:13px;margin-bottom:5px}
+ .benefits small{font-size:11px}
+ .gallery-grid{grid-template-columns:1fr 1fr}
+ .gallery-shot{min-height:220px}
+ .gallery-quote{min-height:170px}
+ .visit-intro{padding-bottom:16px}
+ .visit-intro h2{font-size:clamp(42px,10vw,60px)}
+}
