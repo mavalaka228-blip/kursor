@@ -6,6 +6,22 @@ const dateInput = document.getElementById('date');
 const menu = document.getElementById('mobileNav');
 const menuToggle = document.getElementById('menuToggle');
 let previousFocus;
+
+const servicePrices = {
+  'Мужская стрижка': 2000,
+  'Борода и усы': 1200,
+  'Стрижка + борода': 2800,
+  'Стрижка машинкой': 1000
+};
+const serviceSelect = document.getElementById('service');
+const bookingPrice = document.getElementById('bookingPrice');
+function updateBookingPrice() {
+  const price = servicePrices[serviceSelect.value];
+  bookingPrice.textContent = typeof price === 'number' ? price.toLocaleString('ru-RU') + ' ₽' : 'Уточняется';
+}
+serviceSelect.addEventListener('change', updateBookingPrice);
+updateBookingPrice();
+
 function localDateISO(date) { const d = new Date(date.getTime() - date.getTimezoneOffset() * 60000); return d.toISOString().slice(0,10); }
 function openBooking() {
   previousFocus = document.activeElement;
@@ -14,6 +30,7 @@ function openBooking() {
   document.body.classList.add('modal-open');
   result.hidden = true;
   form.hidden = false;
+  updateBookingPrice();
   document.getElementById('service').focus();
   menu.classList.remove('open');
   menuToggle.setAttribute('aria-expanded','false');
@@ -28,7 +45,7 @@ form.addEventListener('submit',event=>{
  const data=Object.fromEntries(new FormData(form).entries());
  if(data.date<localDateISO(new Date())){dateInput.setCustomValidity('Выберите сегодняшнюю или будущую дату');dateInput.reportValidity();return;}
 
- const safe=document.createElement('span');safe.textContent=`${data.name}, демозапись: ${data.service}, ${data.date} в ${data.time}.`;
+ const safe=document.createElement('span');safe.textContent=`${data.name}, демозапись: ${data.service}, ${data.date} в ${data.time}. Стоимость: ${bookingPrice.textContent}. Оплата: ${data.payment}.`;
  result.replaceChildren(document.createTextNode('Демозапись создана! '),safe,document.createElement('br'),document.createTextNode('Данные никуда не отправлены. Это пример работы интерфейса.'));
  result.hidden=false;form.hidden=true;
 });
@@ -41,6 +58,7 @@ document.querySelectorAll('[data-service]').forEach(button => {
   button.addEventListener('click', () => {
     openBooking();
     document.getElementById('service').value = button.dataset.service;
+    updateBookingPrice();
   });
 });
 // Prevent opening an empty mobile navigation during booking.
