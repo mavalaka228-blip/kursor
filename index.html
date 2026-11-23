@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10120f">
+  <meta property="og:title" content="КОНТУР — барбершоп с характером">
+  <meta property="og:description" content="Демонстрационный сайт барбершопа для портфолио.">
+  <meta name="description" content="КОНТУР — демонстрационный сайт барбершопа. Стрижки, оформление бороды и удобная запись.">
+  <title>КОНТУР — характер в деталях</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header wrap" id="top">
+      <a class="brand" href="#top" aria-label="Контур, на главную">КОНТУР<span>BARBERSHOP</span></a>
+      <nav class="nav" aria-label="Главная навигация"><a href="#services">Услуги</a><a href="#approach">Подход</a><a href="#gallery">Атмосфера</a><a href="#visit">Визит</a></nav>
+      <button class="outline-btn nav-cta" data-open-booking>Записаться <span aria-hidden="true">↗</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    </header>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация"><a href="#services">Услуги</a><a href="#approach">Подход</a><a href="#gallery">Атмосфера</a><a href="#visit">Визит</a><button data-open-booking>Записаться ↗</button></nav>
+
+    <main>
+      <section class="hero wrap" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="tiny-star">✳</span> БАРБЕРШОП НОВОГО РИТМА</p>
+          <h1 id="heroTitle">Характер<br><em>в деталях.</em></h1>
+          <p class="lede">Стрижка, в которой узнаёшь себя. Чёткие линии, спокойная атмосфера и внимание к каждой детали.</p>
+          <button class="primary-btn" data-open-booking>Выбрать время <span aria-hidden="true">↗</span></button>
+          <div class="hero-foot"><span><i class="status-dot"></i> МЕСТО, ГДЕ ЕСТЬ СТИЛЬ</span><span>ЭСТ. 2026 / DEMO</span></div>
+        </div>
+        <div class="hero-media photo" role="img" aria-label="Атмосфера барбершопа: мастер за работой">
+          <span class="photo-fallback">КОНТУР<span>ТВОЙ СТИЛЬ. ТВОИ ПРАВИЛА.</span></span>
+          <div class="media-mark">К<span>EST. 2026</span></div><span class="photo-note">01 / СТИЛЬ НАЧИНАЕТСЯ ЗДЕСЬ</span><span class="image-frame-label">THE ART OF A CLEAN CUT</span>
+        </div>
+      </section>
+      <div class="ticker"><div class="wrap ticker-inner"><span>✳ &nbsp; ЧЁТКИЕ ЛИНИИ</span><span>✳ &nbsp; СВОЙ РИТМ</span><span>✳ &nbsp; НИЧЕГО ЛИШНЕГО</span><span>✳ &nbsp; ТВОЙ КОНТУР</span></div></div>
+
+      <section class="services wrap section" id="services">
+        <div class="section-head"><h2>Выбери свой<br><em>контур.</em></h2><p>От классики до собственного почерка.<br>Правильный силуэт уже начинается здесь.</p></div>
+        <div class="price-list">
+          <div class="price-row"><span class="index">01</span><div class="service-name"><strong>Мужская стрижка</strong><small>Подбор формы. Создание характера.</small></div><span class="duration">60 мин</span><span class="price">2 000 ₽</span><button type="button" class="price-action" data-service="Мужская стрижка" aria-label="Выбрать услугу Мужская стрижка">↗</button></div>
+          <div class="price-row"><span class="index">02</span><div class="service-name"><strong>Борода и усы</strong><small>Чёткая геометрия и аккуратные детали.</small></div><span class="duration">30 мин</span><span class="price">1 200 ₽</span><button type="button" class="price-action" data-service="Борода и усы" aria-label="Выбрать услугу Борода и усы">↗</button></div>
+          <div class="price-row"><span class="index">03</span><div class="service-name"><strong>Стрижка + борода <b class="tag">КОМБО</b></strong><small>Цельный образ за один визит.</small></div><span class="duration">90 мин</span><span class="price">2 800 ₽</span><button type="button" class="price-action" data-service="Стрижка + борода" aria-label="Выбрать услугу Стрижка + борода">↗</button></div>
+          <div class="price-row"><span class="index">04</span><div class="service-name"><strong>Стрижка машинкой</strong><small>Минимум лишнего. Максимум чёткости.</small></div><span class="duration">30 мин</span><span class="price">1 000 ₽</span><button type="button" class="price-action" data-service="Стрижка машинкой" aria-label="Выбрать услугу Стрижка машинкой">↗</button></div>
+        </div>
+      </section>
+
+      <section class="approach-band" id="approach"><div class="wrap approach-grid"><div class="detail-photo photo" role="img" aria-label="Барберские инструменты"><span class="photo-fallback">ТОЧНОСТЬ<br>В КАЖДОМ<br>ДВИЖЕНИИ.</span></div><div class="approach-content"><h2>Сначала слушаем.<br>Потом <em>стрижём.</em></h2><p>Стрижка должна работать и после выхода из кресла. Поэтому мы учитываем твой ритм жизни, структуру волос и время, которое ты готов тратить на укладку.</p><div class="benefits"><div><span>01</span><strong>Твоя форма</strong><small>Образ, который подходит именно тебе.</small></div><div><span>02</span><strong>Твоё время</strong><small>Пунктуальность без лишнего ожидания.</small></div><div><span>03</span><strong>Твой каждый день</strong><small>Укладка, с которой удобно жить.</small></div></div></div></div></section>
+
+
+      <section class="editorial wrap" id="gallery" aria-labelledby="galleryTitle">
+        <div class="editorial-heading"><p class="eyebrow"><span class="tiny-star">✳</span> АТМОСФЕРА</p><h2 id="galleryTitle">Не просто стрижка.<br><em>Твой ритуал.</em></h2><p>Здесь важны не громкие слова, а ощущения. Хороший свет, точная работа и время только для себя.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-shot gallery-shot-one" role="img" aria-label="Барберская атмосфера и рабочее пространство"><span>01 / ПРОСТРАНСТВО</span></div>
+          <div class="gallery-shot gallery-shot-two" role="img" aria-label="Детали работы мастера"><span>02 / ДЕТАЛИ</span></div>
+          <div class="gallery-quote"><span class="quote-symbol">“</span><p>Стиль не требует разрешения.</p><small>КОНТУР / ФИЛОСОФИЯ</small><div class="quote-ornament">K.</div></div>
+        </div>
+      </section>
+      <section class="interlude"><div class="wrap interlude-inner"><span>НЕ ПОДСТРАИВАЙСЯ ПОД СТИЛЬ.</span><strong>ПУСТЬ СТИЛЬ ПОДСТРАИВАЕТСЯ ПОД ТЕБЯ.</strong><button type="button" data-open-booking>Найти своё время <span aria-hidden="true">↗</span></button></div></section>
+
+      <section class="visit wrap section" id="visit"><div class="visit-intro"><h2>Время<br><em>для себя.</em></h2><p>Выбери услугу и удобный день.<br>Остальное — дело мастера.</p><button class="primary-btn" data-open-booking>Запланировать визит ↗</button></div><div class="interior-photo photo" role="img" aria-label="Интерьер современного барбершопа"><span class="photo-fallback">ТВОЁ МЕСТО.<br>ТВОЙ РИТМ.</span></div><div class="visit-card"><div class="visit-card-top"><h3>Место для<br>новой главы.</h3><span class="visit-k">K</span></div><div class="visit-info"><span>РЕЖИМ РАБОТЫ</span><p>Ежедневно · 10:00–21:00</p></div><div class="visit-info"><span>АДРЕС</span><p>Адрес будущего барбершопа</p><small>Демонстрационный проект. Адрес условный.</small></div></div></section>
+    </main>
+    <footer class="footer wrap"><a class="brand" href="#top">КОНТУР<span>BARBERSHOP</span></a><p>Демонстрационный концепт. Услуги, цены и адрес вымышлены · 2026</p><a href="#top">Наверх ↑</a></footer>
+  </div>
+
+  <div class="modal-backdrop" id="bookingBackdrop" hidden>
+    <section class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="close-modal" id="closeBooking" aria-label="Закрыть окно">×</button>
+      <p class="eyebrow">ДЕМО / ЗАПИСЬ</p><h2 id="bookingTitle">Твой <em>визит.</em></h2>
+      <p class="booking-intro">Выбери услугу, дату и время, чтобы посмотреть сценарий записи. Это демоверсия: данные никуда не отправляются.</p>
+      <form id="bookingForm"><label for="service">Услуга</label><select id="service" name="service" required><option value="Мужская стрижка">Мужская стрижка</option><option value="Борода и усы">Борода и усы</option><option value="Стрижка + борода">Стрижка + борода</option><option value="Стрижка машинкой">Стрижка машинкой</option></select><div class="fields"><div><label for="date">Дата</label><input id="date" name="date" type="date" required></div><div><label for="time">Время</label><select id="time" name="time" required><option value="">Выбрать</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option></select></div></div><label for="name">Как к тебе обращаться</label><input id="name" name="name" autocomplete="name" placeholder="Например, Алексей" required minlength="2" maxlength="80"><p class="demo-caption">Демонстрация интерфейса. Настоящая бронь не создаётся.</p><button class="primary-btn booking-submit" type="submit">Подтвердить демозапись ↗</button></form>
+      <div class="booking-success" id="bookingSuccess" hidden role="status"></div>
+    </section>
+  </div>
+</body>
+</html>
