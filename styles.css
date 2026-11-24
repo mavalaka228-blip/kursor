@@ -145,3 +145,26 @@ body{background-image:radial-gradient(circle at 16% 4%,rgba(117,103,69,.075),tra
 .gallery-shot-one{background-image:linear-gradient(180deg,transparent 60%,rgba(8,10,8,.5)),url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1100&q=85');background-position:center}
 .gallery-shot-two{background-image:linear-gradient(180deg,transparent 60%,rgba(8,10,8,.5)),url('https://images.unsplash.com/photo-1593702295094-ada5e62c23aa?w=900&q=85');background-position:center}
 .interior-photo{background-image:linear-gradient(180deg,rgba(8,10,8,.05),rgba(8,10,8,.3)),url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1100&q=85');background-position:center}
+
+/* Mobile layout polish v6: balanced CTAs, no broken gallery tile, shorter transitions */
+.price-action{display:flex!important;align-items:center;justify-content:center;padding:0!important;line-height:1!important;font-size:25px!important;font-family:Arial,Helvetica,sans-serif!important;font-weight:400;letter-spacing:0;position:relative}
+.price-action::first-letter{line-height:1}
+.primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:20px}
+.primary-btn span{margin:0!important;display:inline-flex;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;font-size:21px;line-height:1;min-width:18px}
+.gallery-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}
+.gallery-shot-one{min-height:395px;background-position:center}
+.gallery-quote{min-height:395px}
+@media(max-width:700px){
+ .price-action{width:40px!important;height:40px!important;min-width:40px;font-size:26px!important}
+ .price-row{grid-template-columns:22px minmax(0,1fr) 80px 40px;gap:8px;min-height:90px}
+ .price-row .service-name strong{font-size:12px;line-height:1.3}
+ .price-row .tag{font-size:7px;margin-left:4px}
+ .price-row .price{text-align:right;font-size:12px}
+ .services.section{padding-bottom:48px!important}
+ .approach-grid{padding-top:48px!important;padding-bottom:58px!important}
+ .editorial{padding-top:65px!important;padding-bottom:60px!important}
+ .gallery-grid{grid-template-columns:1fr;gap:12px}
+ .gallery-shot-one{min-height:340px}
+ .gallery-quote{min-height:145px;grid-column:auto}
+ .primary-btn span{font-size:23px}
+}
