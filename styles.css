@@ -168,3 +168,14 @@ body{background-image:radial-gradient(circle at 16% 4%,rgba(117,103,69,.075),tra
  .gallery-quote{min-height:145px;grid-column:auto}
  .primary-btn span{font-size:23px}
 }
+
+/* Fixed geometric arrows: SVG uses its own viewBox, no font baseline offset */
+.price-action{display:grid!important;place-items:center!important;padding:0!important;line-height:0!important}
+.price-action .arrow-icon{display:block!important;width:25px;height:25px;flex:none;transform:none!important}
+.primary-btn span[aria-hidden="true"],.outline-btn span[aria-hidden="true"]{display:inline-flex!important;justify-content:center!important;align-items:center!important;width:25px;height:25px;margin:0!important;line-height:0!important;vertical-align:middle}
+.primary-btn .arrow-icon,.outline-btn .arrow-icon{display:block;width:24px;height:24px;flex:none;transform:none!important}
+@media(max-width:700px){
+ .price-action{display:grid!important;place-items:center!important}
+ .price-action .arrow-icon{width:26px;height:26px}
+ .primary-btn .arrow-icon{width:24px;height:24px}
+}
